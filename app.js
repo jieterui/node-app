@@ -63,7 +63,7 @@ app.get('/Register', function (req, res) {
     connection.query('insert into information set ?', user, function (err, rs) {
         if (err) throw err;
         console.log('ok');
-         res.sendfile(__dirname + "/" + "index.html");
+         res.sendfile(__dirname + "/" + "re.html");
     })
 })
 var server = app.listen(7744, function () {
