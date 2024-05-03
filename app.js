@@ -43,7 +43,8 @@ app.get('/login', (req, res) => {
         if (hashedPassword === user.password) {
             // 登录成功
             console.log('登录成功')
-            res.status(200).json({ message: 'Login successful' });
+            res.sendfile(__dirname + "/" + "OK.html");
+            // res.status(200).json({ message: 'Login successful' });
         } else {
             // 密码错误
             res.status(401).json({ error: 'Unauthorized' });
